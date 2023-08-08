@@ -5,11 +5,11 @@
     <title>главная</title>
 </head>
 <body>
-    <p>Дата посадки: {{ photo['rover']['landing_date']  }}</p>
-    <p>Дата запуска: {{ photo['rover']['launch_date'] }}</p>
     {% for photo in photos %}
         <img src="{{  photo['img_src'] }}">
         <p>Дата фото: {{ photo['earth_date'] }}</p>
+        <p>Дата посадки: {{ photo['rover']['landing_date'] }}</p>
+        <p>Дата запуска: {{ photo['rover']['launch_date'] }}</p>
         <p>Название: {{ photo['rover']['name'] }}</p><hr>
     {% endfor %}
 </body>
